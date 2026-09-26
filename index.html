@@ -176,7 +176,7 @@ html.light-performance *{animation:none!important}
 <script src="api-config.js"></script><script>
 /* FOOTBALL LEGENDS ONLINE V8 CLIENT */
 (function(){
-  const API=()=>String(window.FOOTBALL_API_URL||'').replace(/\/$/,'');
+ const API=()=>String(window.FOOTBALL_API_URL||window.API_BASE_URL||'').replace(/\/$/,'');
   let syncTimer=null;
   window.onlineToken=localStorage.getItem('fl_online_token')||'';
   async function api(path,opts={}){
